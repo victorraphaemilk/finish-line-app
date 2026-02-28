@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "finish-line-app": {
+    "finishline": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -31,15 +31,7 @@
             ],
             "styles": [
               "src/styles.scss"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "security": {
-              "allowedHosts": []
-            },
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            ]
           },
           "configurations": {
             "production": {
@@ -69,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "finish-line-app:build:production"
+              "buildTarget": "finishline:build:production"
             },
             "development": {
-              "buildTarget": "finish-line-app:build:development"
+              "buildTarget": "finishline:build:development"
             }
           },
           "defaultConfiguration": "development"
