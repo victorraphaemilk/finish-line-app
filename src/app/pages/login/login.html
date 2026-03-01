@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div class="container-div">
+    <form [formGroup]="loginForm" (ngSubmit)="fazerLogin()">
+        <label for="email" id="senha">Email</label>
+        <input type="email" name="email" formControlName="email" >
+        @if(loginForm.get('email')?.invalid && loginForm.get('email')?.touched){
+            <span style="color: red; font-size: 0.8rem;">E-mail é obrigatório e deve ser válido.</span>
+
+        }
+        <label for="senha" id="senha">Senha</label>
+        <input type="password" name="senha" formControlName="senha" >
+         @if(loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched){
+            <span style="color: red; font-size: 0.8rem;">Senha é obrigatório e deve ser válido.</span>
+        }
+        <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
+    </form>
+</div>
+

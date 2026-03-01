@@ -1,0 +1,7 @@
+.main-content {
+  display: block;
+  padding-top: 100px; /* Empurra o conteúdo para baixo do header */
+  padding-bottom: 80px; /* Impede que o footer cubra o final da página */
+  min-height: calc(100vh - 180px); /* Garante que a tela ocupe a altura toda */
+  box-sizing: border-box;
+}
